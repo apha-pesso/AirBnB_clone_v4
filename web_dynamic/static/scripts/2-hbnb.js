@@ -9,7 +9,7 @@ $('document').ready(function() {
         $('.amenities h4').text(Object.values(checked).join(', '));
     });
 
-	$.get('http://0.0.0.0:5001/api/v1/status/', 
+	$.get('http://127.0.0.1:5001/api/v1/status/', 
 		function(body) {
 			if (body.status === "OK") {
 				$('#api_status').addClass('available');
