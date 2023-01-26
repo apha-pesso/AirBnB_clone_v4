@@ -11,11 +11,7 @@ $('document').ready(function() {
 
 	$.get('http://127.0.0.1:5001/api/v1/status/', 
 		function(body) {
-			if (body.status === "OK") {
-				$('#api_status').addClass('available');
-			}else{
-				$('#api_status').removeClass('available');
-			}
+			$('#api_status').toggleClass('available', body.status === "OK" );
 		});
 
 });
